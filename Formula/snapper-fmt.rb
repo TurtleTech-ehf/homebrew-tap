@@ -1,25 +1,25 @@
 class SnapperFmt < Formula
   desc "Semantic line break formatter for Org, LaTeX, Markdown, and plaintext"
   homepage "https://snapper.turtletech.us"
-  version "0.8.1"
+  version "0.9.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.8.1/snapper-fmt-aarch64-apple-darwin.tar.xz"
-      sha256 "9a62d5c0771058f81dbbf19858c7e8f2af6fb56404ead70fea21c164fb8b4610"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.0/snapper-fmt-aarch64-apple-darwin.tar.xz"
+      sha256 "7652582cd381fed7c523b6d8309ce4b46fab2a39c8cd11d318726f3e020267cb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.8.1/snapper-fmt-x86_64-apple-darwin.tar.xz"
-      sha256 "900ffe347edf7117d905e0b9abd450e7820980de4722f3db36baf8900f239db0"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.0/snapper-fmt-x86_64-apple-darwin.tar.xz"
+      sha256 "f6fde32846a83a53172fb1ababf748a37c39634f5faefc85de2706b1e885ec19"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.8.1/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "115f7713f8018fbca827e0d9ceaf53cfcd4f75f349af1d9a159ce14b08787a91"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.0/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1d6f3fd6fdd56a9e4be3125c736ad4f19e79fe296b56346a54b791dcd09a95ac"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.8.1/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "47e9b8cb2de5fcd611c011af2dea9d360f956c0ed6039fcd24f5a46063c50a72"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.0/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7d03d4245acd0647bbbb823c1e1d3f9606d060cc1a9b56a28b3f59c4ca93eada"
     end
   end
   license "MIT"
