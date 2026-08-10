@@ -1,25 +1,25 @@
 class SnapperFmt < Formula
-  desc "Semantic line break formatter for Org, LaTeX, Markdown, and plaintext"
+  desc "Semantic line break formatter for Org, LaTeX, Markdown, RST, and plaintext"
   homepage "https://snapper.turtletech.us"
-  version "0.9.1"
+  version "0.10.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.1/snapper-fmt-aarch64-apple-darwin.tar.xz"
-      sha256 "d7f703ad402e7aacfaf4ab5b3c7007e1a1bb440c72cea41b6f0b37317f42fe19"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.10.0/snapper-fmt-aarch64-apple-darwin.tar.xz"
+      sha256 "4ced3722220c263793cd66a55fd45f0b958bb64fc99ee48c49676289b968c12b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.1/snapper-fmt-x86_64-apple-darwin.tar.xz"
-      sha256 "51368ea089748aa2c15ad12ccaa853a8c448deb9de68237c6b3a92af8de75fe7"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.10.0/snapper-fmt-x86_64-apple-darwin.tar.xz"
+      sha256 "06e07b3966d743f41823eee74020f74c22af8a7aec4f57da082e3056261e3c15"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.1/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "683cda1626ec7ea9bacf1f42b94f0a2462d69c9760b0cecda5a0212228dfaea0"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.10.0/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "88fdd1b92a9c937c591715aaa8e1747f4e6b2f6c3d198ed1dea20f4dc91898bf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.9.1/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9b7b9fec0bc34c8acd51ab144e196a54eb5aa143af460b8c2f3acd4439316505"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.10.0/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "46c1599863af5b056a7238eb0b5a33c297974b6352c50cb173f69cc647bf07c8"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class SnapperFmt < Formula
   end
 
   def install
-    bin.install "snapper", "snapper-fmt", "snapper-gen-docs" if OS.mac? && Hardware::CPU.arm?
-    bin.install "snapper", "snapper-fmt", "snapper-gen-docs" if OS.mac? && Hardware::CPU.intel?
-    bin.install "snapper", "snapper-fmt", "snapper-gen-docs" if OS.linux? && Hardware::CPU.arm?
-    bin.install "snapper", "snapper-fmt", "snapper-gen-docs" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "snapper", "snapper-fmt", "snapper-gen-docs"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "snapper", "snapper-fmt", "snapper-gen-docs"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "snapper", "snapper-fmt", "snapper-gen-docs"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "snapper", "snapper-fmt", "snapper-gen-docs"
+    end
 
     install_binary_aliases!
 
