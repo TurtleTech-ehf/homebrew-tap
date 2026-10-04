@@ -1,25 +1,25 @@
 class SnapperFmt < Formula
   desc "Semantic line break formatter for Org, LaTeX, Markdown, RST, and plaintext"
   homepage "https://snapper.turtletech.us"
-  version "0.11.8"
+  version "0.11.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.8/snapper-fmt-aarch64-apple-darwin.tar.xz"
-      sha256 "514ec305b44c3e12edca72fec7a0fcdd7483093bf1f2cb97a3b8c3f46ef5c280"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-aarch64-apple-darwin.tar.xz"
+      sha256 "7fb21120604d38cd293709c1524a8170622411b474c918b18e476236ebb0434c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.8/snapper-fmt-x86_64-apple-darwin.tar.xz"
-      sha256 "05053d6aa64f9c8266bf712ef2a25e897b7f7a78c433b59cb5f5cd44083a5330"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-x86_64-apple-darwin.tar.xz"
+      sha256 "3b4b414bedbc0db53cdb89ca2f122356b6f52d8ed58284868becfcfbfe5a14dd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.8/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "65257b00f73bef480c9fceb2cf7b021bc505e4f3db7dd0472ee0fffbe0782f78"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8a280685a7ffb260d3c4d17efec8b780ac5c38b4630e08ee5b643c77f0a9472a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.8/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8657493a99664872fb8f0c209ea58f7cf45e8f3580e149b604604241e435a8f8"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "5b5597271249ff6c8ac2efe74b0f378645b21fc44257b85e576e65a0cdbbe262"
     end
   end
   license "MIT"
