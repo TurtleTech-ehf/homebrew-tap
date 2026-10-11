@@ -1,35 +1,39 @@
 class SnapperFmt < Formula
   desc "Semantic line break formatter for Org, LaTeX, Markdown, RST, and plaintext"
   homepage "https://snapper.turtletech.us"
-  version "0.11.9"
+  version "0.11.10"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-aarch64-apple-darwin.tar.xz"
-      sha256 "7fb21120604d38cd293709c1524a8170622411b474c918b18e476236ebb0434c"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.10/snapper-fmt-aarch64-apple-darwin.tar.xz"
+      sha256 "b4747e9039ab9f950390f18f0411354642658758203faa37faafb9ac76fd68b7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-x86_64-apple-darwin.tar.xz"
-      sha256 "3b4b414bedbc0db53cdb89ca2f122356b6f52d8ed58284868becfcfbfe5a14dd"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.10/snapper-fmt-x86_64-apple-darwin.tar.xz"
+      sha256 "871270e104c7a7b579066eb4a2c2155601a3a761ee1ca13c5188b9892b12b5f7"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "8a280685a7ffb260d3c4d17efec8b780ac5c38b4630e08ee5b643c77f0a9472a"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.10/snapper-fmt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2751f3e7a978b434f78acf75596cb484920094697436c5518a21d84b3f20f0a0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.9/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "5b5597271249ff6c8ac2efe74b0f378645b21fc44257b85e576e65a0cdbbe262"
+      url "https://github.com/TurtleTech-ehf/snapper/releases/download/v0.11.10/snapper-fmt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "492860c708a258c501e6c4ead17321713516c0f353f3458e4a9b0e438b22dfd9"
     end
   end
   license "MIT"
 
   BINARY_ALIASES = {
-    "aarch64-apple-darwin":      {},
-    "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
-    "x86_64-pc-windows-gnu":     {},
-    "x86_64-unknown-linux-gnu":  {},
+    "aarch64-apple-darwin":               {},
+    "aarch64-unknown-linux-gnu":          {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static":  {},
+    "x86_64-apple-darwin":                {},
+    "x86_64-pc-windows-gnu":              {},
+    "x86_64-unknown-linux-gnu":           {},
+    "x86_64-unknown-linux-musl-dynamic":  {},
+    "x86_64-unknown-linux-musl-static":   {},
   }.freeze
 
   def target_triple
